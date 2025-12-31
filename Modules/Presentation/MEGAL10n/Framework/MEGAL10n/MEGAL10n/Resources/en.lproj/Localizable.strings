@@ -4670,6 +4670,10 @@
 "tabbarTitle.drive"="Drive";
 /* Title for the Photo tab bar item */
 "tabbarTitle.photos"="Photos";
+/* Title for the shared photos gallery */
+"sharedPhotos.title"="Shared Photos";
+/* Empty state title for shared photos */
+"sharedPhotos.empty.title"="No shared photos";
 /* Title for the Chat tab bar item */
 "tabbarTitle.chat"="Chat";
 /* Title for the Menu tab bar item */

@@ -49,7 +49,12 @@ extension SharedItemsViewController: DisplayMenuDelegate {
             navigationItem.leftBarButtonItem = selectAllBarButtonItem
             navigationItem.rightBarButtonItem = editBarButtonItem
         } else {
-            navigationItem.leftBarButtonItem = nil
+            let unifiedSharedPhotosNodes = unifiedSharedPhotosEligibleNodes()
+            if unifiedSharedPhotosNodes.isNotEmpty {
+                navigationItem.leftBarButtonItem = unifiedSharedPhotosBarButtonItem
+            } else {
+                navigationItem.leftBarButtonItem = nil
+            }
 
             guard !isCloudDriveRevampEnabled else {
                 navigationItem.rightBarButtonItem = nil
@@ -80,6 +85,30 @@ extension SharedItemsViewController: DisplayMenuDelegate {
         UserDefaults.standard.set(sortOrderType.rawValue, forKey: "SharedItemsSortOrderType")
         nodesSortTypeHasChanged()
         setNavigationBarButtons()
+    }
+
+    @objc func showUnifiedSharedPhotos() {
+        let nodes = unifiedSharedPhotosEligibleNodes()
+        guard nodes.isNotEmpty else { return }
+        
+        SharedItemsViewRouter().showUnifiedSharedPhotos(nodes: nodes)
+    }
+
+    private var unifiedSharedPhotosBarButtonItem: UIBarButtonItem {
+        let barButtonItem = UIBarButtonItem(
+            image: MEGAAssets.UIImage.mediaDiscovery,
+            style: .plain,
+            target: self,
+            action: #selector(showUnifiedSharedPhotos)
+        )
+        barButtonItem.accessibilityLabel = Strings.localized("sharedPhotos.title", comment: "Accessibility label for shared photos.")
+        return barButtonItem
+    }
+    
+    private func unifiedSharedPhotosEligibleNodes() -> [MEGANode] {
+        guard incomingButton?.isSelected == true else { return [] }
+        let nodes = incomingNodesMutableArray as? [MEGANode] ?? []
+        return nodes.filter { $0.isNodeKeyDecrypted() }
     }
 
     // MARK: - NodeActionMenu

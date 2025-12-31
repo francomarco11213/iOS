@@ -1807,6 +1807,7 @@
 		A8C1B73E27734A22007095F4 /* OfflineTableViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1B73D27734A22007095F4 /* OfflineTableViewController+Additions.swift */; };
 		A8C1B7B3277384BC007095F4 /* OfflineCollectionViewController+ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1B7B2277384BC007095F4 /* OfflineCollectionViewController+ContextMenu.swift */; };
 		A8C1B7BD27748A84007095F4 /* SharedItemsViewController+ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1B7BC27748A84007095F4 /* SharedItemsViewController+ContextMenu.swift */; };
+		A8F7B0D12F02D0B700A1B2C3 /* UnifiedSharedPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7B0D02F02D0B700A1B2C3 /* UnifiedSharedPhotosViewController.swift */; };
 		A8C21FF92CEB7E5C001730B7 /* RequestStatusProgressWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C21FF72CEB7E5C001730B7 /* RequestStatusProgressWindowManager.swift */; };
 		A8C47595299D03EE0074511F /* MEGAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B60DDC1521A7A7930097E4A3 /* MEGAConstants.m */; };
 		A8C6494B2A39B8B0009F59ED /* CameraUploadOperation+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C6494A2A39B8B0009F59ED /* CameraUploadOperation+Additions.swift */; };
@@ -4645,6 +4646,7 @@
 		A8C1B73D27734A22007095F4 /* OfflineTableViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfflineTableViewController+Additions.swift"; sourceTree = "<group>"; };
 		A8C1B7B2277384BC007095F4 /* OfflineCollectionViewController+ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfflineCollectionViewController+ContextMenu.swift"; sourceTree = "<group>"; };
 		A8C1B7BC27748A84007095F4 /* SharedItemsViewController+ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedItemsViewController+ContextMenu.swift"; sourceTree = "<group>"; };
+		A8F7B0D02F02D0B700A1B2C3 /* UnifiedSharedPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedSharedPhotosViewController.swift; sourceTree = "<group>"; };
 		A8C21FF72CEB7E5C001730B7 /* RequestStatusProgressWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusProgressWindowManager.swift; sourceTree = "<group>"; };
 		A8C262971FA0B4A2006172CE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A8C2629A1FA0B4EA006172CE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -13519,6 +13521,7 @@
 				E8D5BF671BF35DC400955550 /* SharedItemsViewController.h */,
 				E8D5BF681BF35DC400955550 /* SharedItemsViewController.m */,
 				B5CC2AA22995EF8A00A966A0 /* SharedItemsViewModel.swift */,
+				A8F7B0D02F02D0B700A1B2C3 /* UnifiedSharedPhotosViewController.swift */,
 			);
 			path = "Shared Items";
 			sourceTree = "<group>";
@@ -15826,6 +15829,7 @@
 				BF14A144289B3DA900BC6DCF /* SharedItemsViewController+TabSelection.swift in Sources */,
 				E8D5BF691BF35DC400955550 /* SharedItemsViewController.m in Sources */,
 				B5CC2AA32995EF8A00A966A0 /* SharedItemsViewModel.swift in Sources */,
+				A8F7B0D12F02D0B700A1B2C3 /* UnifiedSharedPhotosViewController.swift in Sources */,
 				B5CC2AA52995F15200A966A0 /* SharedItemsViewRouter.swift in Sources */,
 				94F92EB82CAAD6DE00966A0F /* ShareLinkDialogRouter.swift in Sources */,
 				A8E10D8021A5677900ACD42F /* ShareLocationViewController.m in Sources */,

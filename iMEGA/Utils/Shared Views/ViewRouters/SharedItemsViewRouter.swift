@@ -1,4 +1,5 @@
 import MEGADomain
+import UIKit
 
 @MainActor
 final class SharedItemsViewRouter: NSObject {
@@ -19,6 +20,15 @@ final class SharedItemsViewRouter: NSObject {
         CustomModalAlertRouter(.pendingUnverifiedOutShare,
                                presenter: UIApplication.mnz_presentingViewController(),
                                outShareEmail: email).start()
+    }
+
+    func showUnifiedSharedPhotos(nodes: [MEGANode]) {
+        guard let navigationController = UIApplication.mnz_visibleViewController().navigationController else {
+            return
+        }
+        
+        let viewController = UnifiedSharedPhotosViewController(incomingNodes: nodes)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
 }
