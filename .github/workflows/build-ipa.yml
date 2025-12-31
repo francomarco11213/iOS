@@ -23,10 +23,13 @@ jobs:
         run: sudo gem install cocoapods
 
       - name: Install Pods
-        run: pod install
+        run: |
+          cd iMEGA
+          pod install
 
       - name: Build archive
         run: |
+          cd iMEGA
           xcodebuild \
             -workspace MEGA.xcworkspace \
             -scheme MEGA \
@@ -38,6 +41,7 @@ jobs:
 
       - name: Export IPA
         run: |
+          cd iMEGA
           cat > ExportOptions.plist <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
