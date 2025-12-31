@@ -30,8 +30,11 @@ jobs:
           chmod +x configure.sh
           ./configure.sh
 
+      - name: Install CocoaPods
+        run: gem install cocoapods
+
       - name: Install Pods
-        run: bundle exec pod install
+        run: pod install
 
       - name: Build archive
         run: |
